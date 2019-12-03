@@ -1,0 +1,413 @@
+body {
+    display: grid;
+    width: 100%;
+    height: 175vh;
+    grid-template-columns: 25vw 25vw 25vw 25vw;
+    grid-template-rows: 5% 45% 45% 5%;
+    text-align: center;
+    margin: 0px 0px 0px;
+}
+
+
+header {
+    background-color: #415381;
+    grid-column: 1/5;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #FDFCFC;
+
+}
+
+h2 {
+    font-family: "copperplate";
+}
+
+h3 {
+    font-family: Arial, Hebrew;
+    grid-row: 2/3;
+    height: 10%;
+    width: 100%;
+    margin: 0;
+    color: #FDFCFC;
+    text-align: left;
+    text-decoration: underline;
+}
+
+p {
+    font-family: "Rockwell";
+    grid-row: 3/4;
+    width: 100%;
+    margin: 0px 0px 0px;
+    color: black;
+    word-wrap: break-word;
+    text-align: left;
+    font-size: .8em;
+    font-weight: bold;
+    padding-left: 4px;
+    padding-right: 9px;
+}
+
+.bluejeans {
+    background-color: #69ADF0;
+    width: 90%;
+    height: 100%;
+    margin: 0px 0px 0px;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0), 6px 6px 4px rgba(0, 0, 0, 0.664);
+}
+
+#bluejeansp {
+    height: 70%;
+    margin: 0px 0px 0px;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0), 6px 6px 4px rgba(0, 0, 0, 0.664);
+}
+
+#bluejeanspcale {
+    width: 50%;
+    height: 70%;
+    margin: 0px 0px 0px;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0), 6px 6px 4px rgba(0, 0, 0, 0.664);
+}
+
+#cale {
+    width: 50%;
+}
+
+h1 {
+    font-family: "Chalkduster", fantasy;
+}
+
+.big {
+    font-size: 1.5rem;
+}
+
+#fitness {
+    margin-left: 10%;
+}
+
+.menubar {
+    margin: 0;
+    font-size: 1.1rem;
+
+}
+
+.menubar li {
+    display: inline-block;
+    width: 12px;
+    padding-left: 50px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.menubarvanish {
+    width: 100vw;
+    display: none;
+    background-color: rgba(105, 172, 240, 0.582);
+
+}
+
+.menubarvanish li {
+    display: inline-block;
+    background-color: rgba(105, 172, 240, 0.445);
+    padding: 15px 10vw;
+    cursor: pointer;
+    position: relative;
+    box-sizing: border-box;
+    margin-left: 0;
+    border-width: 5px;
+    border-color: #FDFCFC;
+    border-style: solid;
+}
+
+.menubarvanish li a {
+    color: #FDFCFC;
+    text-decoration: none;
+    font-family: 'Rockwell';
+
+}
+
+.menubarvanish li:hover {
+    background-color: #ACCEEF
+}
+
+.menubar li a {
+    color: #FDFCFC;
+    text-decoration: none;
+}
+
+.menubar li a:hover {
+    color: #ACCEEF
+}
+
+.cards {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 70% 5% 25%;
+    margin: 0px 0px 0px;
+
+}
+
+
+img {
+    height: 70%;
+    width: 90%;
+    box-shadow: 5px 5px 10px black;
+}
+
+
+
+video {
+    height: 70%;
+    grid-row: 1/2;
+    width: 90%;
+    background-color: rgba(0, 0, 0, 0.685);
+    box-shadow: 5px 5px 10px black;
+}
+}
+
+#card1 {
+    grid-column: 1/2;
+}
+
+#card2 {
+    grid-column: 2/4;
+
+}
+
+#card3 {
+    grid-column: 4/5;
+}
+
+#card4 {
+    grid-column: 1/3;
+}
+
+#card5 {
+    grid-column: 3/5;
+}
+
+footer {
+    background-color: #415381;
+    grid-column: 1/5;
+}
+
+
+footer #bluejeanspcale {
+    height: 0;
+    color: rgba(0, 0, 0, 0);
+}
+
+footer p {
+    font-size: 1px;
+    color: rgba(0, 0, 0, 0);
+}
+
+footer h3 {
+    font-size: 1px;
+    color: rgba(0, 0, 0, 0);
+}
+
+
+@media only screen and (max-width : 768px) {
+    body {
+        background-color: #415381;
+        grid-template-areas:
+            "card2"
+            "card1"
+            "card3"
+            "card4"
+            "card5"
+            "footer";
+        grid-template-columns: 100vw;
+        grid-template-rows: 13% 20% 20% 20% 20% 7%;
+        height: 500vh;
+    }
+
+    #thot {
+        display: none;
+    }
+
+    header {
+        position: absolute;
+        margin-top: 130px;
+        margin-left: 50%;
+        background: none;
+    }
+
+    #fitness {
+        position: absolute;
+        margin-top: 70px;
+        ;
+    }
+
+    #pic {
+        /* grid-rows: 1;
+        grid-column: 1/2; */
+        grid-area: pic;
+    }
+
+    .con {
+        display: none;
+    }
+
+    #card1 {
+        /* grid-rows: 3/4;
+        grid-column: 1/2; */
+        grid-area: card1;
+    }
+
+    .menubar {
+
+        display: none;
+        position: absolute;
+    }
+
+    .menubarvanish {
+        grid-rows: 2/3;
+        grid-column: 1/2;
+        grid-area: menubar;
+        display: inline-block;
+        position: absolute;
+        margin-top: 23vh;
+    }
+
+
+    #card2 {
+        /* grid-rows: 1/2;
+        grid-column: 1/2; */
+        grid-area: card2;
+        height: 500px;
+    }
+
+    #card3 {
+        /* grid-rows: 4/5;
+        grid-column: 1/2; */
+        grid-area: card3;
+    }
+
+    #card4 {
+        /* grid-rows: 6/7;
+        grid-column: 1/2; */
+        grid-area: card4;
+    }
+
+    #card5 {
+        /* grid-rows: 5/6;
+        grid-column: 1/2; */
+        grid-area: card5;
+        height: 100%;
+    }
+
+
+    footer {
+        /* grid-rows: 8/9;
+        grid-column: 1/2; */
+        grid-area: footer;
+        width: 100%;
+
+        margin: 0;
+        height: 40%;
+
+    }
+
+    footer #bluejeanspcale {
+        margin-top: 30px;
+        height: 200%;
+        color: rgb(0, 0, 0);
+        width: 91%;
+        margin-left: 4%;
+        border-bottom: 2px solid #FDFCFC;
+    }
+
+    footer p {
+        margin-top: 9px;
+        font-size: 1em;
+        color: rgb(0, 0, 0);
+    }
+
+    footer h3 {
+        font-size: 1.3em;
+        color: #FDFCFC;
+    }
+
+    .card {
+        grid-template-rows: 70% 1% 29%;
+    }
+
+
+
+
+    #card1 img,
+    #card3 img,
+    #card4 video,
+    #card5 img {
+
+        position: absolute;
+        margin-top: 10%;
+        margin-left: 25%;
+        height: 55%;
+        width: 50%;
+        border: 2px solid #FDFCFC;
+    }
+
+    #card5 img {
+
+        width: 80%;
+        margin-left: 10%;
+    }
+
+
+    #card2 img {
+        width: 100%;
+    }
+
+    .bluejeans {
+        height: 102%;
+        border-left: 2px solid #FDFCFC;
+        border-right: 2px solid #FDFCFC;
+        border-top: 2px solid #FDFCFC;
+
+    }
+
+    #bluejeansp {
+        height: 450%;
+        margin-top: 10px;
+        margin-bottom: 100px;
+        border-top: 0px solid #FDFCFC;
+        border-bottom: 2px solid #FDFCFC;
+
+    }
+
+
+
+    p {
+        padding-right: 9px;
+        text-align: center;
+        font-size: 1em;
+        padding-bottom: 8px;
+    }
+
+    #card5 .bluejeans {
+        height: 100%ß;
+    }
+
+    #card5 #bluejeansp {
+        margin-top: 0;
+        height: 590%;
+        border-bottom: 2px solid #FDFCFC;
+
+    }
+
+    #card5 #bluejeansp p {
+        padding-left: 5px;
+        padding-right: 9px;
+    }
+
+    h3 {
+        font-size: 1.5em;
+        padding-left: 9px;
+        padding-top: 9px;
+    }
+
+}
