@@ -1,0 +1,353 @@
+body {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 25vw 25vw 25vw 25vw;
+    grid-template-rows: 5% 45% 45% 5%;
+    text-align: center;
+    margin: 0px 0px 0px;
+}
+
+
+
+header {
+    background-color: #415381;
+    grid-column: 1/5;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #FDFCFC;
+
+}
+
+h2 {
+    font-family: "Rockwell";
+}
+
+h3 {
+    font-family: "Rockwell";
+    grid-row: 2/3;
+    height: 10%;
+    width: 100%;
+    margin: 0;
+    color: #FDFCFC;
+    text-align: left;
+    text-decoration: underline;
+}
+
+p {
+    font-family: "Rockwell";
+    grid-row: 3/4;
+    width: 100%;
+    margin: 0px 0px 0px;
+    color: black;
+    word-wrap: break-word;
+    text-align: left;
+    font-size: .8em;
+    font-weight: bold;
+    padding-left: 4px;
+    padding-right: 9px;
+}
+
+
+
+
+h1 {
+    font-family: "Chalkduster", fantasy;
+}
+
+.big {
+    font-size: 1.5rem;
+}
+
+#fitness {
+    margin-left: 10%;
+}
+
+.menubar {
+    margin: 0;
+    font-size: 1.1rem;
+    display: flex;
+
+
+}
+
+.menubar li {
+    display: inline-block;
+    width: 12px;
+    padding-left: 70px;
+    padding-right: 30px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.menubarvanish {
+    width: 100%;
+    display: none;
+    background-color: rgb(105, 172, 240);
+
+}
+
+.menubarvanish li {
+    display: inline-block;
+    background-color: rgb(105, 172, 240);
+    padding-top: 10px;
+    padding-right: 10.8vw;
+    padding-left: 10.8vw;
+    padding-bottom: 30px;
+    cursor: pointer;
+    position: relative;
+    box-sizing: border-box;
+    margin-left: 0;
+    border-width: 5px;
+    border-color: #FDFCFC;
+    border-style: solid;
+    font-style: bold;
+    font-size: 1.2rem;
+}
+
+.menubarvanish li a {
+    color: #FDFCFC;
+    text-decoration: none;
+    font-family: 'Rockwell';
+
+}
+
+.menubarvanish li:hover {
+    background-color: #ACCEEF
+}
+
+.menubar li a {
+    color: #FDFCFC;
+    text-decoration: none;
+}
+
+.menubar li a:hover {
+    color: #ACCEEF;
+}
+
+.cards {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 70% 5% 25%;
+    margin: 0px 0px 0px;
+    position: absolute;
+
+}
+
+
+
+img {
+    height: 70%;
+    width: 90%;
+    box-shadow: 5px 5px 10px black;
+}
+
+
+
+.calendar {
+    margin-left: 20vw;
+    margin-top: 5vh;
+    grid-row: 2/4;
+}
+
+
+#card2 {
+    grid-column: 2/4;
+    display: none;
+}
+
+
+
+footer {
+    background-color: #415381;
+    grid-column: 1/5;
+    justify-content: center;
+    z-index: -10;
+    text-align: left;
+    position: static;
+}
+
+
+
+
+.invis {
+    font-size: 20px;
+    opacity: 0;
+    color: white;
+}
+
+
+input[type=text] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+input[type=text]:focus {
+    border-color: lime;
+}
+
+input[type=submit] {
+    background-color: grey;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+input[type=submit]:hover {
+    background-color: #415381;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #69ADF0;
+    padding: 20px;
+    width: 755px;
+    margin-top: 10px;
+    color: white;
+    font-family: 'Rockwell';
+    margin-bottom: 5px;
+    text-align: left;
+
+}
+
+
+
+
+
+@media only screen and (max-width : 768px) {
+    body {
+        background-color: #415381;
+        grid-template-areas:
+            "calendar"
+            "container";
+        grid-template-columns: 100vw;
+        grid-template-rows: 13% 20% 20% 20% 20% 7%;
+        height: 100vh;
+    }
+
+    #thot {
+        display: none;
+    }
+
+    .calendar {
+        grid-area: calendar;
+        margin-top: 350px;
+        margin-left: 0;
+    }
+
+    iframe {
+        width: 90vw;
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+
+    .container {
+        grid-area: container;
+        width: 85vw;
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+
+    header {
+        position: absolute;
+        margin-top: 130px;
+        margin-left: 50%;
+        background: none;
+    }
+
+    #fitness {
+        position: absolute;
+        margin-top: 70px;
+        ;
+    }
+
+
+
+    .menubar {
+
+        display: none;
+        position: absolute;
+    }
+
+    .menubarvanish {
+        grid-rows: 2/3;
+        grid-column: 1/2;
+        grid-area: menubar;
+        display: flex;
+        position: absolute;
+        width: 100vw;
+        margin-top: 160px;
+        justify-content: center;
+    }
+
+    li {
+        height: 10px;
+        padding-bottom: 100px;
+    }
+
+
+    #card2 {
+        /* grid-rows: 1/2;
+        grid-column: 1/2; */
+        grid-area: card2;
+        height: 70%;
+        display: inherit;
+        z-index: -10;
+        width: 100%;
+    }
+
+
+
+    footer {
+        /* grid-rows: 8/9;
+        grid-column: 1/2; */
+        grid-area: footer;
+        width: 100%;
+
+        margin: 0;
+        height: 40%;
+
+    }
+
+
+
+    .card {
+        grid-template-rows: 70% 1% 29%;
+    }
+
+
+    #card2 img {
+        width: 100%;
+    }
+
+    p {
+        padding-right: 9px;
+        text-align: center;
+        font-size: 1em;
+        padding-bottom: 8px;
+    }
+
+
+    ul {
+        padding: 0;
+        width: 100vw;
+    }
+
+
+    h3 {
+        font-size: 1.5em;
+        padding-left: 9px;
+        padding-top: 9px;
+    }
+
+}

@@ -1,0 +1,327 @@
+/* text modify
+*/
+h1 {
+    margin: 0;
+    font-family: "Chalkduster", fantasy;
+    font-size: 3em;
+    color: #FDFCFC;
+}
+
+h2 {
+    font-family: "Rockwell";
+    font-size: 3em;
+    margin-top: 10px;
+    color: #FDFCFC;
+}
+
+h3 {
+    font-family: "Rockwell";
+
+    height: 10%;
+    width: 100%;
+    margin: 0;
+    color: #FDFCFC;
+    text-align: left;
+    text-decoration: underline;
+}
+
+p {
+    font-family: "Rockwell";
+    margin 0;
+    color: black;
+    word-wrap: break-word;
+    text-align: left;
+    font-size: .8em;
+    font-weight: bold;
+    padding: 10px;
+    background-color: #69ADF0;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0), 6px 6px 4px rgba(0, 0, 0, 0.664);
+
+}
+
+
+
+
+
+/* elements
+*/
+body {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 10% 10% 35% 25% 15% 5%;
+
+    grid-template-areas:
+        "header1 header2 header3"
+        "blank blank flex"
+        "img1 img2 img3"
+        "card1 card2 card3"
+        "blank1 blank1 blank1"
+        "footer footer footer";
+
+    text-align: center;
+    margin: 0;
+}
+
+
+#header1 {
+    min-width: 300px;
+    grid-area: header1;
+    background-color: #415381;
+
+}
+
+#header2 {
+
+    grid-area: header2;
+    background-color: #415381;
+
+}
+
+
+#header3 {
+    grid-area: header3;
+    background-color: #415381;
+
+    min-width: 300px;
+}
+
+#img1 {
+
+    grid-area: img1;
+}
+
+#img2 {
+
+    grid-area: img2;
+}
+
+#img3 {
+    min-width: 300px;
+    grid-area: img3;
+}
+
+#card1 {
+
+
+    grid-area: card1;
+}
+
+#card2 {
+
+    grid-area: card2;
+}
+
+#card3 {
+
+    grid-area: card3;
+}
+
+.blank {
+
+    background-color: black;
+    grid-area: blank;
+}
+
+.blank1 {
+
+    background-color: grey;
+    grid-area: blank1;
+}
+
+
+footer {
+    background-color: #415381;
+    grid-area: footer;
+}
+
+.menubar {
+    display: flex;
+    margin-top: 20px;
+    font-size: .4em;
+
+
+}
+
+
+
+.menubar li {
+    display: inline-block;
+    width: 100%;
+    cursor: pointer;
+
+}
+
+
+
+.menubar li a {
+    color: #FDFCFC;
+    text-decoration: none;
+}
+
+.menubar li a:hover {
+    color: #ACCEEF
+}
+
+
+
+img {
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0), 6px 6px 4px rgba(0, 0, 0, 0.664);
+    height: 100%;
+    width: 70%;
+}
+
+.card {
+
+    margin-left: 15%;
+    height: 50%;
+    width: 70%;
+    background-color: #69ADF0;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0), 6px 6px 4px rgba(0, 0, 0, 0.664);
+}
+
+
+#flex {
+    opacity: 0%;
+    width: 10px;
+    position: absolute;
+}
+
+
+
+
+
+@media only screen and (max-width : 768px) {
+    body {
+        background-color: #415381;
+        grid-template-areas: " flex"
+            "header2"
+            "header3"
+            "blank"
+
+            "header1"
+
+            "blank1"
+            "img1"
+            "card1"
+            "img2"
+            "card2"
+            "img3"
+            "card3"
+            "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: 10% 3% 3% 1% 2% 1% 15% 11% 15% 11% 15% 11% 2%;
+        height: 300vh;
+    }
+
+
+
+    #flex {
+        opacity: 100%;
+        position: relative;
+        width: 100vw;
+        height: 139%;
+        z-index: -10;
+    }
+
+    #flex img {
+        width: 100%;
+    }
+
+
+
+    #header2 {
+
+        background-color: rgba(255, 255, 255, 0);
+
+
+
+    }
+
+
+
+
+
+    .menubar li {
+        background-color: #69ADF0;
+        border: 5px solid #FDFCFC;
+        padding-top: 8px;
+        padding-bottom: 8px;
+
+    }
+
+    ul {
+        padding: 0px;
+    }
+
+    #blank1,
+    #header1,
+    #img1,
+    #img2,
+    #img3,
+    .card {
+
+        border-left: 2px solid #FDFCFC;
+        border-right: 2px solid #FDFCFC;
+        margin-left: 10%;
+        width: 80%;
+        background-color: #69ADF0;
+    }
+
+
+    #img2,
+    #img3,
+    #header1 {
+        border-top: 2px solid #FDFCFC;
+    }
+
+    #img1,
+    #img2,
+    #img3 {
+
+        padding-top: 20px;
+
+    }
+
+    .card {
+        padding-top: 20px;
+        box-shadow: 0 0 0 0;
+        z-index: -5;
+        border-bottom: 2px solid #FDFCFC;
+    }
+
+    #header1 {
+        min-width: 0px;
+    }
+
+    #blank1 {
+
+        background-color: #69ADF0;
+        z-index: -10;
+
+    }
+
+    p {
+        width: 90%;
+        margin: 0;
+        margin-left: 5%;
+        box-shadow: 0 0 0 0;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
